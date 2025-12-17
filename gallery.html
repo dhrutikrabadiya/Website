@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Gallery | Autonic Electricals</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+  <style>
+    .gallery-section {
+      padding: 60px 0;
+    }
+    .section-title {
+      border-left: 5px solid #007bff;
+      padding-left: 15px;
+      margin-bottom: 30px;
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    /* ===== NAVBAR SAME AS HOME PAGE ===== */
+
+:root {
+  --secondary: #343A40;
+  --accent: #17A2B8;
+}
+
+.navbar {
+  background-color: var(--secondary) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--accent) !important;
+  text-decoration: underline;
+}
+
+.navbar-toggler {
+  border: none;
+  filter: brightness(150%);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top" aria-label="Primary Navigation">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Autonic Electricals</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <main class="container">
+
+    <!-- PCC Panels -->
+    <section class="gallery-section" id="pcc">
+      <h2 class="section-title">PCC Panel Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <a href="IMG_20250915_105442.jpg" data-lightbox="pcc">
+            <img src="IMG_20250915_105442.jpg" alt="PCC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="IMG_20250915_105538.jpg" data-lightbox="pcc">
+            <img src="IMG_20250915_105538.jpg" alt="PCC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="IMG_20250915_105651.jpg" data-lightbox="pcc">
+            <img src="IMG_20250915_105651.jpg" alt="PCC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="IMG_20250915_105708.jpg" data-lightbox="pcc">
+            <img src="IMG_20250915_105708.jpg" alt="PCC Panel" class="gallery-img">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MCC Panels -->
+    <section class="gallery-section bg-light" id="mcc">
+      <h2 class="section-title">MCC Panel Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <a href="IMG_20250915_111619.jpg" data-lightbox="mcc">
+            <img src="IMG_20250915_111619.jpg" alt="MCC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://blog.exertherm.com/hubfs/Exertherm%202023/Image/shutterstock_1579910989.jpg" data-lightbox="mcc">
+            <img src="https://blog.exertherm.com/hubfs/Exertherm%202023/Image/shutterstock_1579910989.jpg" alt="MCC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="IMG_20250915_111657.jpg" data-lightbox="mcc">
+            <img src="IMG_20250915_111657.jpg" alt="MCC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="IMG_20250915_112016.jpg" data-lightbox="mcc">
+            <img src="IMG_20250915_112016.jpg" alt="MCC Panel" class="gallery-img">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- APFC Panels -->
+    <section class="gallery-section" id="apfc">
+      <h2 class="section-title">APFC Panel Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <a href="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" data-lightbox="apfc">
+            <img src="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" alt="APFC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" data-lightbox="apfc">
+            <img src="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" alt="APFC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" data-lightbox="apfc">
+            <img src="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" alt="APFC Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" data-lightbox="apfc">
+            <img src="https://idea-tech.in/wp-content/uploads/2019/09/45-IDEATECH-APFC-PANEL-INOVANCE.jpg" alt="APFC Panel" class="gallery-img">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Control Panels -->
+    <section class="gallery-section bg-light" id="control">
+      <h2 class="section-title">Control Panel Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <a href="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" data-lightbox="control">
+            <img src="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" alt="Control Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" data-lightbox="control">
+            <img src="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" alt="Control Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" data-lightbox="control">
+            <img src="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" alt="Control Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" data-lightbox="control">
+            <img src="https://tiimg.tistatic.com/fp/1/009/634/control-panel-repair-service-533.jpg" alt="Control Panel" class="gallery-img">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fire Pump Panels -->
+    <section class="gallery-section" id="fire-pump">
+      <h2 class="section-title">Fire Pump Panel Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <a href="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" data-lightbox="fire">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" alt="Fire Pump Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" data-lightbox="fire">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" alt="Fire Pump Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" data-lightbox="fire">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" alt="Fire Pump Panel" class="gallery-img">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" data-lightbox="fire">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2025/8/534347238/WX/GK/MZ/4519726/fire-pump-control-panel-500x500.png" alt="Fire Pump Panel" class="gallery-img">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">© 2025 Autonic Electricals</p>
+      <p class="mb-0">📞 +91-9876543210 | ✉️ info@autonicelectricals.com</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS & Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>

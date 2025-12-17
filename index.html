@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autonic Electricals | Panel Manufacturer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #007BFF;
+      --secondary: #343A40;
+      --background: #F8F9FA;
+      --section-bg: #FFFFFF;
+      --text: #212529;
+      --accent: #17A2B8;
+      --border-color: #E9ECEF;
+      --focus-outline: #17A2B8;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--secondary);
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: white !important;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: var(--accent) !important;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    .navbar-toggler {
+      border: none;
+      filter: brightness(150%);
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: var(--primary);
+      color: white;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 5px 15px rgb(0 123 255 / 0.3);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.85;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 4px 10px rgb(23 162 184 / 0.5);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 6px 15px rgb(0 123 255 / 0.6);
+      outline-offset: 3px;
+      outline: 2px solid var(--focus-outline);
+    }
+
+    section {
+      padding: 4rem 1rem;
+      background-color: var(--section-bg);
+      border-radius: 12px;
+      max-width: 1200px;
+      margin: 3rem auto;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    section#products {
+      animation-delay: 0.2s;
+    }
+
+    section.bg-light {
+      animation-delay: 0.4s;
+    }
+
+    section#contact {
+      animation-delay: 0.6s;
+    }
+
+    h2 {
+      color: var(--secondary);
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    /* Products */
+    .product-card {
+      background: var(--background);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: default;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .product-card:nth-child(1) { animation-delay: 0.3s; }
+    .product-card:nth-child(2) { animation-delay: 0.4s; }
+    .product-card:nth-child(3) { animation-delay: 0.5s; }
+    .product-card:nth-child(4) { animation-delay: 0.6s; }
+    .product-card:nth-child(5) { animation-delay: 0.7s; }
+    .product-card:nth-child(6) { animation-delay: 0.8s; }
+
+    .product-card:hover,
+    .product-card:focus-within {
+      box-shadow: 0 10px 30px rgb(23 162 184 / 0.3);
+      transform: translateY(-8px);
+      outline: none;
+    }
+
+    .product-card h5 {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: #555;
+      flex-grow: 1;
+      margin-bottom: 0;
+    }
+
+    /* About Section */
+    .bg-light {
+      background-color: var(--background) !important;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.05);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .bg-light h2 {
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .bg-light p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Contact Section */
+    #contact {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: var(--section-bg);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgb(0 0 0 / 0.07);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    #contact h2 {
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: var(--secondary);
+      text-align: center;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    .form-control {
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 8px rgba(23, 162, 184, 0.25);
+      outline: none;
+    }
+
+    .form-control:invalid {
+      border-color: #dc3545;
+    }
+
+    .form-control:invalid:focus {
+      box-shadow: 0 0 8px rgba(220, 53, 69, 0.4);
+    }
+
+    button.btn-primary {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 0.75rem;
+      border-radius: 30px;
+    }
+
+    button.btn-primary:focus-visible {
+      outline-offset: 3px;
+      outline: 2px solid var(--focus-outline);
+      box-shadow: 0 6px 15px rgb(23 162 184 / 0.6);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--secondary);
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+      color: var(--primary);
+      outline: none;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        margin: 2rem 1rem;
+        padding: 3rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<nav class="navbar navbar-expand-lg sticky-top" aria-label="Primary Navigation">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Autonic Electricals</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" tabindex="-1">
+    <div class="container">
+      <h1>Powering Industries with Precision Panels</h1>
+      <p>Specialists in PCC, MCC, APFC, Control & Fire Pump Panels</p>
+      <a href="#contact" class="btn btn-primary btn-lg" role="button" aria-label="Get a quote now">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" tabindex="-1" aria-labelledby="products-title">
+    <h2 id="products-title">Our Core Products & Solutions</h2>
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6 d-flex">
+          <article class="product-card" tabindex="0" aria-label="PCC Panels description">
+            <h5>PCC Panels (Power Control Centers)</h5>
+            <p>Designed for high-capacity electrical power distribution. Ideal for heavy industrial plants, utility substations, and infrastructure projects. Built to ensure safety, scalability, and performance.</p>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex">
+          <article class="product-card" tabindex="0" aria-label="MCC Panels description">
+            <h5>MCC Panels (Motor Control Centers)</h5>
+            <p>Centralized motor control systems used in industrial automation, offering fault protection, easy maintenance, and energy efficiency through advanced motor control units.</p>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex">
+          <article class="product-card" tabindex="0" aria-label="APFC Panels description">
+            <h5>APFC Panels (Automatic Power Factor Correction)</h5>
+            <p>Microcontroller-based panels that automatically regulate power factor, reduce penalty charges, and optimize energy usage for commercial and industrial facilities.</p>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex">
+          <article class="product-card" tabindex="0" aria-label="Control Panels description">
+            <h5>Control Panels (PLC / Automation)</h5>
+            <p>Custom-designed panels for automation, machinery, and process control using PLC, SCADA, and HMI interfaces. Engineered for reliability and smart factory operations.</p>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex">
+          <article class="product-card" tabindex="0" aria-label="Fire Pump Controller Panels description">
+            <h5>Fire Pump Controller Panels</h5>
+            <p>NFPA-compliant panels that ensure reliable startup and monitoring of fire pumps in critical safety systems. Suitable for high-rise buildings, hospitals, and industrial safety zones.</p>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex">
+          <article class="product-card" tabindex="0" aria-label="Distribution Boards and Bus Duct Systems description">
+            <h5>Distribution Boards & Bus Duct Systems</h5>
+            <p>Tailor-made low-voltage distribution boards and aluminum/copper bus ducts for efficient power transfer across floors and machines in large facilities.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-light" id="about" tabindex="-1" aria-labelledby="about-title">
+    <h2 id="about-title">About Autonic Electricals</h2>
+    <p>With over a decade of experience, Autonic Electricals is a trusted manufacturer of high-quality electrical panels. Our panels are used across industries for power distribution, control, automation, and safety. We deliver robust, certified, and customized solutions for every need.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" tabindex="-1" aria-labelledby="contact-title">
+    <h2 id="contact-title">Get in Touch</h2>
+    <form action="https://formsubmit.co/dhrutikrabadiya@gmail.com" method="POST" novalidate>
+      <input type="hidden" name="_honey" style="display:none" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+          aria-required="true"
+          aria-describedby="nameHelp"
+          pattern="^[A-Za-z\s]{2,50}$"
+          title="Please enter your full name (letters and spaces only)."
+        />
+        <div id="nameHelp" class="form-text">Only letters and spaces, 2-50 characters.</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="name@example.com"
+          required
+          aria-required="true"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">We'll never share your email.</div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message / Requirements</label>
+        <textarea
+          class="form-control"
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Describe your requirements..."
+          required
+          aria-required="true"
+          minlength="10"
+          maxlength="1000"
+          aria-describedby="messageHelp"
+        ></textarea>
+        <div id="messageHelp" class="form-text">Minimum 10 characters.</div>
+      </div>
+      <button type="submit" class="btn btn-primary" aria-label="Send Inquiry">Send Inquiry</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Autonic Electricals. All Rights Reserved.</p>
+    <p>📞 +91-9876543210 | 📧 info@autonicelectricals.com</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
